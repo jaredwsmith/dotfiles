@@ -16,6 +16,7 @@ call vundle#begin()
 "
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
+Plugin 'flazz/vim-colorschemes'
 Plugin 'bling/vim-airline'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'mxw/vim-jsx'
@@ -26,6 +27,9 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-fugitive'
 Plugin 'kien/rainbow_parentheses.vim'
 Plugin 'kchmck/vim-coffee-script'
+Bundle 'joonty/vim-phpunitqf.git'
+Plugin 'fatih/vim-go'
+Plugin 'othree/yajs.vim'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
@@ -79,8 +83,6 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
 let g:syntastic_javascript_checkers = ['eslint']
-
-let g:syntastic_php_phpcs_args="--report=csv --standard=/Users/jared/Documents/code/flagship-cutter/super_powers/flagship/code-standards/BTPHP/ruleset.xml"
 
 " Color scheme
 

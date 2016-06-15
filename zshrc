@@ -1,11 +1,13 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/jared/.oh-my-zsh
+export ZSH=/Users/jaredwsmith/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 ZSH_THEME="powerlevel9k/powerlevel9k"
+
+# ZSH_THEME="maran"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -83,14 +85,23 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
-export DEFAULT_USER=jared
+POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
+export DEFAULT_USER=jaredwsmith
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(status time context dir vcs)
+POWERLEVEL9K_SHORTEN_STRATEGY="truncate_from_right"
+POWERLEVEL9K_DISABLE_RPROMPT=true
+POWERLEVEL9K_STATUS_VERBOSE=false
+
 
 # Aliases
 alias git='hub'
+alias ls='ls -laG'
+alias rethinkdb.start='launchctl load /usr/local/opt/rethinkdb/homebrew.mxcl.rethinkdb.plist'
+alias rethinkdb.stop='launchctl unload /usr/local/opt/rethinkdb/homebrew.mxcl.rethinkdb.plist'
 
 test -e ${HOME}/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_integration.zsh
 
 . `brew --prefix`/etc/profile.d/z.sh
 
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+fpath=(/usr/local/share/zsh-completions $fpath)
