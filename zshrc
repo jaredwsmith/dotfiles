@@ -1,13 +1,12 @@
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/jaredwsmith/.oh-my-zsh
 
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
+# Set name of the theme to load.  # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-#ZSH_THEME="powerlevel9k/powerlevel9k"
+ZSH_THEME="powerlevel9k/powerlevel9k"
 
-ZSH_THEME="sorin"
+#ZSH_THEME="agnoster"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -51,7 +50,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git vi-mode brew docker osx sudo)
+plugins=(git vi-mode brew docker osx sudo php composer)
 
 # User configuration
 
@@ -88,10 +87,13 @@ source $ZSH/oh-my-zsh.sh
 
 POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
 export DEFAULT_USER=jaredwsmith
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(status time context dir vcs)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir vcs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(vi_mode status time)
 POWERLEVEL9K_SHORTEN_STRATEGY="truncate_from_right"
-POWERLEVEL9K_DISABLE_RPROMPT=true
-POWERLEVEL9K_STATUS_VERBOSE=false
+POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
+POWERLEVEL9K_SHORTEN_DELIMITER=""
+POWERLEVEL9K_VI_INSERT_MODE_STRING=""
+POWERLEVEL9K_VI_COMMAND_MODE_STRING="%{$fg_bold[yellow]%}❮%{$reset_color%}%{$fg[yellow]%}❮❮%{$reset_color%}"
 
 # Aliases
 alias git='hub'
