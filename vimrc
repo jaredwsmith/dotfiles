@@ -32,7 +32,7 @@ Bundle 'joonty/vim-phpunitqf.git'
 Plugin 'fatih/vim-go'
 Plugin 'othree/yajs.vim'
 Plugin 'shawncplus/phpcomplete.vim'
-Plugin 'ervandew/supertab'
+"Plugin 'ervandew/supertab'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
@@ -89,10 +89,10 @@ let g:syntastic_javascript_checkers = ['eslint']
 
 " Autocomplete
 
-autocmd FileType php set omnifunc=phpcomplete#CompletePHP
-set completeopt=longest,menuone
-let g:phpcomplete_parse_docblock_comments = 1
-let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
+"autocmd FileType php set omnifunc=phpcomplete#CompletePHP
+"set completeopt=longest,menuone
+"let g:phpcomplete_parse_docblock_comments = 1
+"let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
 
 " Color scheme
 

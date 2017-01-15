@@ -4,9 +4,9 @@ export ZSH=/Users/jaredwsmith/.oh-my-zsh
 # Set name of the theme to load.  # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="powerlevel9k/powerlevel9k"
+#ZSH_THEME="powerlevel9k/powerlevel9k"
 
-#ZSH_THEME="agnoster"
+ZSH_THEME="robbyrussell"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -55,7 +55,7 @@ plugins=(git vi-mode brew docker osx sudo php composer)
 # User configuration
 
 export GOPATH=$HOME/Documents/code/go
-export PATH="/usr/local/heroku/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:$GOPATH/bin:$PATH"
+export PATH="/usr/local/heroku/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:$GOPATH/bin:/home/jaredwsmith/composer/vendor/bin:$PATH"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -92,7 +92,7 @@ POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(vi_mode status time)
 POWERLEVEL9K_SHORTEN_STRATEGY="truncate_from_right"
 POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
 POWERLEVEL9K_SHORTEN_DELIMITER=""
-POWERLEVEL9K_VI_INSERT_MODE_STRING=""
+POWERLEVEL9K_VI_INSERT_MODE_STRING="❮❮❮"
 POWERLEVEL9K_VI_COMMAND_MODE_STRING="%{$fg_bold[yellow]%}❮%{$reset_color%}%{$fg[yellow]%}❮❮%{$reset_color%}"
 
 # Aliases
