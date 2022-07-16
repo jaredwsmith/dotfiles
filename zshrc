@@ -1,3 +1,5 @@
+# Fig pre block. Keep at the top of this file.
+[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && . "$HOME/.fig/shell/zshrc.pre.zsh"
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/jaredwsmith/.oh-my-zsh
 
@@ -6,7 +8,7 @@ export ZSH=/Users/jaredwsmith/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 #ZSH_THEME="powerlevel9k/powerlevel9k"
 
-ZSH_THEME="robbyrussell"
+ZSH_THEME="hyperzsh"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -50,12 +52,12 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git vi-mode brew docker osx sudo php composer)
+plugins=(brew docker osx sudo php composer)
 
 # User configuration
 
 export GOPATH=$HOME/Documents/code/go
-export PATH="/usr/local/heroku/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:$GOPATH/bin:/home/jaredwsmith/composer/vendor/bin:$PATH"
+export PATH="/opt/homebrew/bin:/usr/local/heroku/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:$GOPATH/bin:/home/jaredwsmith/composer/vendor/bin:$PATH"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -98,8 +100,8 @@ POWERLEVEL9K_VI_COMMAND_MODE_STRING="%{$fg_bold[yellow]%}❮%{$reset_color%}%{$f
 # Aliases
 alias git='hub'
 alias ls='ls -laG'
-alias rethinkdb.start='launchctl load /usr/local/opt/rethinkdb/homebrew.mxcl.rethinkdb.plist'
-alias rethinkdb.stop='launchctl unload /usr/local/opt/rethinkdb/homebrew.mxcl.rethinkdb.plist'
+alias rethinkdb.start='/usr/bin/env /usr/bin/arch -x86_64 launchctl load /usr/local/opt/rethinkdb/homebrew.mxcl.rethinkdb.plist'
+alias rethinkdb.stop='/usr/bin/env /usr/bin/arch -x86_64 launchctl unload /usr/local/opt/rethinkdb/homebrew.mxcl.rethinkdb.plist'
 
 test -e ${HOME}/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_integration.zsh
 
@@ -108,4 +110,5 @@ test -e ${HOME}/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_in
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fpath=(/usr/local/share/zsh-completions $fpath)
 
-
+# Fig post block. Keep at the bottom of this file.
+[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && . "$HOME/.fig/shell/zshrc.post.zsh"

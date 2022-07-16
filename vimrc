@@ -28,11 +28,13 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-fugitive'
 Plugin 'kien/rainbow_parentheses.vim'
 Plugin 'kchmck/vim-coffee-script'
-Bundle 'joonty/vim-phpunitqf.git'
+" Bundle 'joonty/vim-phpunitqf.git'
 Plugin 'fatih/vim-go'
 Plugin 'othree/yajs.vim'
 Plugin 'shawncplus/phpcomplete.vim'
 "Plugin 'ervandew/supertab'
+Plugin 'dracula/vim'
+Plugin 'parkr/vim-jekyll'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
@@ -96,7 +98,7 @@ let g:syntastic_javascript_checkers = ['eslint']
 
 " Color scheme
 
-colo Tomorrow-Night
+colo dracula
 
 " Always show status bar
 
@@ -108,7 +110,7 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1 
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
-let g:airline_theme = 'tomorrow'
+let g:airline_theme = 'dracula'
 
 function! HasPaste()
         if &paste
@@ -119,4 +121,6 @@ function! HasPaste()
 
 set noshowmode
 
+
 map <C-n> :NERDTreeToggle<CR>
+
