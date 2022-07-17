@@ -52,7 +52,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(brew docker osx sudo php composer)
+plugins=(brew docker sudo composer)
 
 # User configuration
 
@@ -87,28 +87,18 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
-export DEFAULT_USER=jaredwsmith
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(vi_mode status time)
-POWERLEVEL9K_SHORTEN_STRATEGY="truncate_from_right"
-POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
-POWERLEVEL9K_SHORTEN_DELIMITER=""
-POWERLEVEL9K_VI_INSERT_MODE_STRING="❮❮❮"
-POWERLEVEL9K_VI_COMMAND_MODE_STRING="%{$fg_bold[yellow]%}❮%{$reset_color%}%{$fg[yellow]%}❮❮%{$reset_color%}"
-
 # Aliases
 alias git='hub'
 alias ls='ls -laG'
-alias rethinkdb.start='/usr/bin/env /usr/bin/arch -x86_64 launchctl load /usr/local/opt/rethinkdb/homebrew.mxcl.rethinkdb.plist'
-alias rethinkdb.stop='/usr/bin/env /usr/bin/arch -x86_64 launchctl unload /usr/local/opt/rethinkdb/homebrew.mxcl.rethinkdb.plist'
 
 test -e ${HOME}/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_integration.zsh
 
 . `brew --prefix`/etc/profile.d/z.sh
 
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-fpath=(/usr/local/share/zsh-completions $fpath)
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+fpath=(/opt/homebrew/share/zsh-completions $fpath)
+
+alias venv='source .venv/bin/activate'
 
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && . "$HOME/.fig/shell/zshrc.post.zsh"
