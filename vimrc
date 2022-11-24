@@ -35,6 +35,7 @@ Plugin 'shawncplus/phpcomplete.vim'
 "Plugin 'ervandew/supertab'
 Plugin 'dracula/vim'
 Plugin 'parkr/vim-jekyll'
+Plugin 'hashivim/vim-terraform'
 call vundle#end()            " required
 filetype plugin indent on    " required
 

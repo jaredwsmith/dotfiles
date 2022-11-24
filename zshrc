@@ -1,5 +1,3 @@
-# Fig pre block. Keep at the top of this file.
-[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && . "$HOME/.fig/shell/zshrc.pre.zsh"
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/jaredwsmith/.oh-my-zsh
 
@@ -60,6 +58,14 @@ export GOPATH=$HOME/Documents/code/go
 export PATH="/opt/homebrew/bin:/usr/local/heroku/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:$GOPATH/bin:/home/jaredwsmith/composer/vendor/bin:$PATH"
 # export MANPATH="/usr/local/man:$MANPATH"
 
+# Dedupe virtualenv
+export VIRTUAL_ENV_DISABLE_PROMPT=1
+
+# pyinit
+#export PYENV_ROOT="$HOME/.pyenv"
+#command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+#eval "$(pyenv init -)"
+
 source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
@@ -99,6 +105,3 @@ source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fpath=(/opt/homebrew/share/zsh-completions $fpath)
 
 alias venv='source .venv/bin/activate'
-
-# Fig post block. Keep at the bottom of this file.
-[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && . "$HOME/.fig/shell/zshrc.post.zsh"
