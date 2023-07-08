@@ -93,15 +93,20 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# Aliases
-alias git='hub'
-alias ls='ls -laG'
-
 test -e ${HOME}/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_integration.zsh
 
 . `brew --prefix`/etc/profile.d/z.sh
 
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-fpath=(/opt/homebrew/share/zsh-completions $fpath)
 
+if type brew &>/dev/null; then
+    FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+
+    autoload -Uz compinit
+    compinit
+  fi
+
+# Aliases
+alias git='hub'
+alias ls='ls -laG'
 alias venv='source .venv/bin/activate'
